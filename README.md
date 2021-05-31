@@ -109,3 +109,11 @@ _TODO: Answer the following questions to fill in the blanks:_
 •	Update the install-elk.yml and filebeat-playbook.yml file to include the virtual machine you want to run the playbooks on by adding the webserver and elkserver IP address. You are then able to specify in the playbook.yml file which host you want to install what on. 
 •	Run the playbook, and navigate to http://[10.1.0.4]:5601/app/kibana to check that the installation worked as expected.
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc.
+nano ansible.cfg
+add the machine, its IP, and ansible_python_interpreter=/usr/bin/python3 to the hosts
+Ctrl + x to exit file
+in the folder that install-elk.yml is in, run: cp install-elk.yml /etc/ansible
+nano install-elk.yml /etc/ansible
+name: installing elk hosts: 
+Ctrl + x to exit file
+ansible-playbook install-elk.yml
